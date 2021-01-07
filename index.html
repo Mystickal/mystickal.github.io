@@ -26,14 +26,15 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <link rel='icon' type='image/png' sizes='96x96' href='favicon-96x96.png'>
     <link rel='stylesheet' href='css/common.css'>
 
-    <title>AR EXPERIMENT</title>
+    <title>Hit Test</title>
   </head>
   <body>
     <header>
       <details open>
-        <summary>Placement Testing</summary>
+        <summary>Hit Test</summary>
         <p>
           This sample demonstrates use of hit testing to place virtual objects on real-world surfaces.
+          <a class="back" href="./">Back</a>
         </p>
       </details>
     </header>
@@ -63,7 +64,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       arObject.visible = false;
       scene.addNode(arObject);
 
-      let flower = new Gltf2Node({url: './assets/dragonite/scene.gltf'});
+      let flower = new Gltf2Node({url: 'media/gltf/sunflower/camp.gltf'});
       arObject.addNode(flower);
 
       let reticle = new Gltf2Node({url: 'media/gltf/reticle/reticle.gltf'});
