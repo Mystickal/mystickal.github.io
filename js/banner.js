@@ -28,6 +28,7 @@ $(document).ready(function(){
             profText.fadeIn("fast");
             $("#placeholder").show();
             $(".tuts").hide();
+            $(".loading").animate({opacity: "10%"});
             infoDisplayed = true;
         } else {
             profContainer.animate({top: "50%", height: "300px", width: "300px"});
@@ -36,6 +37,7 @@ $(document).ready(function(){
             $("#placeholder").hide();
             aptitude1_AI.hide();
             aptitudeDiv.hide();
+            $(".loading").animate({opacity: "100%"});
             infoDisplayed = false;
         }
     });
