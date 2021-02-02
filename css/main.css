@@ -47,6 +47,7 @@ body, html{
     top: 20%;
     left: 50%;
     text-align: center;
+    white-space: nowrap;
 }
 
 a.linkedin{
