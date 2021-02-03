@@ -26,15 +26,15 @@ $(document).ready(function(){
             profContainer.animate({top: "25%", height: "200px", width: "200px"});
             profPic.animate({height: "200px", width:"200px"});
             profText.fadeIn("fast");
-            $("#placeholder").show();
             $(".tuts").hide();
             $(".loading").animate({opacity: "10%"});
+            $("body").css("margin-bottom", "1200px");
             infoDisplayed = true;
         } else {
             profContainer.animate({top: "50%", height: "300px", width: "300px"});
             profPic.animate({height: "300px", width:"300px"});
             profText.fadeOut("fast");
-            $("#placeholder").hide();
+            $("body").css("margin-bottom", "0");
             aptitude1_AI.hide();
             aptitudeDiv.hide();
             $(".loading").animate({opacity: "100%"});
@@ -73,14 +73,17 @@ $(document).ready(function(){
             if (scrollDist > 200 && scrollDist < 600){
                 linkedInLink.changeText(text2);
             } else
-            if (scrollDist > 600 && scrollDist < 900){
+            if (scrollDist > 600 && scrollDist < 1000){
                 linkedInLink.changeText(text3);
+                if(!linkedInLink.is(":visible")){
+                    linkedInLink.fadeIn();
+                }
                 aptitude1_AI.fadeOut();
                 aptitudeText1.fadeOut();
                 aptitudeDiv.fadeOut();
             }
-            if (scrollDist > 900){
-                linkedInLink.fadeOut("fast");
+            if (scrollDist > 1000){
+                linkedInLink.hide();
                 aptitudeDiv.fadeIn(); 
                 aptitude1_AI.fadeIn(1000);
                 aptitudeText1.fadeIn(2000);

@@ -1,8 +1,12 @@
-body, html{
-    background-color: rgb(0, 0, 0);
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+body, html{ 
+    background-color: rgba(19, 19, 19);
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
     height: 100%;
+    margin-bottom: 0;
 }
 
 .image-container {
@@ -19,7 +23,6 @@ body, html{
 }
 
 #main-img {
-    display: block;
     height: 300px;
     width: 300px;
     overflow: hidden;
@@ -44,10 +47,22 @@ body, html{
     position: fixed;
     margin: 0 auto;
     transform: translate(-50%,-50%);
-    top: 20%;
+    top: 15%;
     left: 50%;
     text-align: center;
     white-space: nowrap;
+}
+
+.quicklink{
+    color: white !important;
+    position: fixed;
+    
+    transform: translate(0,-50%);
+    bottom: 0%;
+    right: 2%;
+    text-align: right;
+    opacity: 50%;
+    background-color: none;
 }
 
 a.linkedin{
@@ -66,12 +81,13 @@ a.linkedin:hover{
     position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
     background-image: url("../images/wp123.gif");
+    background-color: rgba(19, 19, 19, 0.844);
     background-position: center center; 
     background-repeat:no-repeat;
     background-size:cover;
 }
 .loading{
-    background-color: black;
+    background-color: rgba(19, 19, 19, 0.844);
 }
 .loading img{
     position: fixed; 
@@ -130,3 +146,170 @@ a.project-link:hover{
     color: purple !important;
 }
 */
+
+/*Responsive*/
+@media only screen and (max-width: 600px) {
+  .quicklink h5{
+    font-size: 10px;
+    bottom: 10%;
+    margin-top: -10px;
+    transform: translate(0%,0%);
+  }
+
+  .tuts h1{
+    font-size: 20px;
+  }
+
+  .tuts h4{
+    font-size: 15px;
+  }
+
+  #info h4{
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  #apt-text1 h1{
+    font-weight: 800px;
+    -webkit-text-stroke: 0.2px black;
+    white-space: nowrap;
+  }
+
+  .loading img{
+    /* Preserve aspet ratio */
+    min-width: 600px !important;
+    min-height: 600px !important;
+  }
+
+  .socials ul li{
+    width: 30px;
+    height: 30px;
+    transform: translate(0,-50%);
+    left: -10%;
+  }
+  
+  .socials h4{
+    font-size: 15px;
+    margin-bottom: 25px;
+    margin-left: -30px;
+  } 
+
+  .socials{
+    transform: translate(-50%,0);
+    bottom: 5%;
+    left: 60%;
+  }
+
+  .image-container {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+  #main-img {
+      height: 200px;
+      width: 200px;
+  }
+}
+
+/* links - test */
+.socials{
+    position:fixed;
+    transform: translate(0,-50%);
+    top: 90%;
+    left: 0%;
+}
+
+.socials h4{
+    color: white;
+    transform: translate(15%,0%);
+    left: 10%;
+    opacity: 50%;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    
+    transform-style: preserve-3d;
+ }
+ ul li {
+   position: relative;
+   list-style: none;
+   width: 40px;
+   height: 40px;
+   margin: 0px 20px;
+ }
+ ul li:before{
+   content: '';
+   position: absolute;
+   bottom: -10px;
+   left: -5px;
+   width: 100%;
+   height: 10px;
+   background: #2a2a2a;
+   trnasform-origin: top;
+   transform: skewX(-41deg);
+ }
+ ul li:after{
+   content: '';
+   position: absolute;
+   top:5px;
+   left: -9px;
+   width: 9px;
+   height: 100%;
+   background: #2a2a2a;
+   trnasform-origin: right;
+   transform: skewY(-49deg);
+ }
+ ul li span{
+   position: absolute;
+   top: 0;
+   lef: 0;
+   width: 100%;
+   height: 100%;
+   display: flex !important;
+   background: #2a2a2a;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   font-size: 30px !important;
+   transition: 1.5s ease-out;
+ }
+ ul li:hover span {
+   z-index: 1000;
+   transition: .3s;
+   color: #fff;
+   box-shadw: -1px 1px 1px rgba(0, 0, 0, .5);
+ }
+ 
+ ul li:hover span:nth-child(5){
+   transform: translate(40px, -40px);
+   opacity: 1;
+ }
+ ul li:hover span:nth-child(4){
+   transform: translate(30px, -30px);
+   opacity: .8;
+ }
+ ul li:hover span:nth-child(3){
+   transform: translate(20px, -20px);
+   opacity: .6;
+ }
+ ul li:hover span:nth-child(2){
+   transform: translate(10px, -10px);
+   opacity: .4;
+ }ul li:hover span:nth-child(1){
+   transform: translate(0px, 0px);
+   opacity: .2;
+ }
+ ul li:nth-child(1):hover span{
+   background: #6a6a6a !important;
+ }
+ ul li:nth-child(2):hover span{
+   background: #1abf3b !important;
+ }
+ ul li:nth-child(3):hover span{
+   background: #e77c18 !important;
+ }
+ ul li:nth-child(4):hover span{
+   background: #114edd !important;
+ }  
