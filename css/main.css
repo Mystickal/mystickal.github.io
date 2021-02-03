@@ -6,7 +6,7 @@ body, html{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
     height: 100%;
-    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .image-container {
@@ -148,7 +148,7 @@ a.project-link:hover{
 */
 
 /*Responsive*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
   .quicklink h5{
     font-size: 10px;
     bottom: 10%;

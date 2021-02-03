@@ -28,13 +28,17 @@ $(document).ready(function(){
             profText.fadeIn("fast");
             $(".tuts").hide();
             $(".loading").animate({opacity: "10%"});
-            $("body").css("margin-bottom", "1200px");
+            $("body").css("padding-bottom", "2000px");
             infoDisplayed = true;
         } else {
             profContainer.animate({top: "50%", height: "300px", width: "300px"});
             profPic.animate({height: "300px", width:"300px"});
             profText.fadeOut("fast");
-            $("body").css("margin-bottom", "0");
+            if ($(window).width() < 960) {
+                $("body").css("padding-bottom", "2000px");
+            } else {
+                $("body").css("padding-bottom", "0px");
+            }
             aptitude1_AI.hide();
             aptitudeDiv.hide();
             $(".loading").animate({opacity: "100%"});
@@ -66,7 +70,7 @@ $(document).ready(function(){
         var text2 = "I'm an undergraduate student in China."
         var text3 = "I study Computer Science with interest in"
 
-        if(infoDisplayed=true){
+        if(infoDisplayed==true){
             if(scrollDist < 200){
                 linkedInLink.changeText(text1);
             } else 
