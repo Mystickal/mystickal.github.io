@@ -40,7 +40,7 @@ $(document).ready(function(){
                 $("body").css("padding-bottom", "0px");
             }
             aptitude1_AI.hide();
-            aptitudeDiv.hide();
+            //aptitudeDiv.hide();
             $(".loading").animate({opacity: "100%"});
             infoDisplayed = false;
         }
@@ -88,7 +88,7 @@ $(document).ready(function(){
             }
             if (scrollDist > 1000){
                 linkedInLink.hide();
-                aptitudeDiv.fadeIn(); 
+                //aptitudeDiv.fadeIn(); 
                 aptitude1_AI.fadeIn(1000);
                 aptitudeText1.fadeIn(2000);
             }
